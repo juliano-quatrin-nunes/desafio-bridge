@@ -3,6 +3,7 @@ package com.desafio_bridge.number_web_app.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ public class NumberService {
 
     private final NumberDao numberDao;
 
+    @Autowired
     public NumberService(@Qualifier("local") NumberDao numberDao) {
         this.numberDao = numberDao;
     }
