@@ -1,12 +1,26 @@
-.hist-table {
+.hist-section {
+    margin: 48px 16px;
     text-align: center;
-    padding: 64px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 80%;
+    justify-content: center;
 }
 
-.hist-table th {
+.hist-section table {
+    max-width: 80%;
+    padding: 32px 128px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.hist-section h1 {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.hist-section th {
     border-bottom-style: solid;
     border-top-style: solid;
     border-color: #6278f7;;
@@ -14,6 +28,6 @@
     height: 64px;
 }
 
-.hist-table tbody tr {
+.hist-section tbody tr {
     height: 32px;
 }

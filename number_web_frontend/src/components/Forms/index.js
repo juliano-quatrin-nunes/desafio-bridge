@@ -11,6 +11,7 @@ const Forms = (props) => {
         let res = await fetch(`http://localhost:8080/api/v1/number/${numK}`)
         let response = await res.json()
         setNumN(response)
+        props.submit();
     }
 
     const [numK, setNumK] = useState('')
