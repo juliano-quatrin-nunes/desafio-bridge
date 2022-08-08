@@ -14,8 +14,8 @@ const ContainerHist = (props) => {
                 {props.numbers.map(number => {
                     return(
                         <tr key={number.name}>
-                            <td>{number.name}</td>
-                            <td>{number.valor}</td>
+                            <td>{number.numK}</td>
+                            <td>{number.numN}</td>
                         </tr>
                     )
                 })}

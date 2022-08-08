@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.desafio_bridge.number_web_app.dao.NumberDao;
+import com.desafio_bridge.number_web_app.model.Number;
 
 @Service
 public class NumberService {
@@ -46,6 +47,10 @@ public class NumberService {
         this.numberDao.addNumber(k, listaN, numN);
 
         return numN;
+    }
+
+    public List<Number> getAllNumbers(){
+        return numberDao.getAllNumbers();
     }
 
 }
