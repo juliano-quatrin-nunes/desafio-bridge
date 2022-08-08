@@ -1,0 +1,19 @@
+.hist-table {
+    text-align: center;
+    padding: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+
+.hist-table th {
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-color: #6278f7;;
+    width: 256px;
+    height: 64px;
+}
+
+.hist-table tbody tr {
+    height: 32px;
+}
