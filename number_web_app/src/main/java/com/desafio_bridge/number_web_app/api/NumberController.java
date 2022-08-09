@@ -21,7 +21,7 @@ public class NumberController {
     private NumberService numberService;
 
     @GetMapping(path="{k}")
-    public int getNumberNByK(@PathVariable("k") int k){
+    public List<Integer> getNumberNByK(@PathVariable("k") int k){
         return numberService.getNByKValue(k);
     }
 

@@ -20,7 +20,10 @@ public class NumberService {
         this.numberDao = numberDao;
     }
 
-    public int getNByKValue(int k){
+    public List<Integer> getNByKValue(int k){
+
+        long time1 = System.currentTimeMillis();
+
         List<Integer> listaN = new ArrayList<>();
         int numN;
 
@@ -44,9 +47,18 @@ public class NumberService {
 
         numN = listaN.size();
 
+        long timeToCalculate = System.currentTimeMillis() - time1;
+
+        System.out.println(timeToCalculate);
+
         this.numberDao.addNumber(k, listaN, numN);
 
-        return numN;
+        List<Integer> listReturn = new ArrayList<>();
+
+        listReturn.add(numN);
+        listReturn.add((int) timeToCalculate);
+
+        return listReturn;
     }
 
     public List<Number> getAllNumbers(){
