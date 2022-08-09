@@ -3,12 +3,17 @@
 }
 
 .text-field label {
+    color: #FFF;
+    font-weight: bold;
     display: block;
+    margin-bottom: 16px;
+    font-size: 16px;
 }
 
 .text-field input {
     background-color: white;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
     width: 100%;
     border: none;
     font-size: 16px;

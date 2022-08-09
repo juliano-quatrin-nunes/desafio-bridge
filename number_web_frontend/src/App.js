@@ -1,4 +1,3 @@
-import { func } from 'prop-types';
 import { useState } from 'react';
 import Banner from './components/Banner/index.js'
 import Forms from './components/Forms/index.js';
@@ -7,7 +6,7 @@ import HistTable from './components/HistTable/index.js'
 function App() {
 
   async function refreshNumbers() {
-    let res = await fetch("http://localhost:8080/api/v1/number")
+    let res = await fetch("https://number-app-backend.herokuapp.com/api/v1/number")
     let response = await res.json()
     setNumbers(response)
   }
@@ -15,7 +14,7 @@ function App() {
   const [numbers, setNumbers] = useState([])
 
   return (
-    <div>
+    <div style={{backgroundColor: "#24252e"}}>
       <header>
         <Banner />
         <Forms submit={refreshNumbers}/>

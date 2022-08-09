@@ -14,6 +14,7 @@ const TextField = (props) => {
                 placeholder={props.placeholder}
                 onChange={changeValue}
                 value={props.value}
+                type='number'
             />
         </div>
     )
