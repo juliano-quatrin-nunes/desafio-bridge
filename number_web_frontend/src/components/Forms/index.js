@@ -5,13 +5,23 @@ import { useState } from 'react'
 
 const Forms = (props) => {
 
+    // Requisições para o backend local
     async function sendForm (evento) {
+        evento.preventDefault()
+        let res = await fetch(`http://localhost:8080/api/v1/number/${numK}`)
+        let response = await res.json()
+        setNumNTempo(response)
+        props.submit();
+    }
+
+    // Requisições para o backend hospedado no heroku
+    /*async function sendForm (evento) {
         evento.preventDefault()
         let res = await fetch(`https://number-app-backend.herokuapp.com/api/v1/number/${numK}`)
         let response = await res.json()
         setNumNTempo(response)
         props.submit();
-    }
+    }*/
 
     const [numK, setNumK] = useState('')
     const [numNTempo, setNumNTempo] = useState('')

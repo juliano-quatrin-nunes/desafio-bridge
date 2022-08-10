@@ -49,8 +49,6 @@ public class NumberService {
 
         long timeToCalculate = System.currentTimeMillis() - time1;
 
-        System.out.println(timeToCalculate);
-
         this.numberDao.addNumber(k, listaN, numN);
 
         List<Integer> listReturn = new ArrayList<>();
