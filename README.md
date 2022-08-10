@@ -37,3 +37,8 @@ Já para o Front-end, com o Node.js, React.js e npm instalados, basta abir o dir
 cd number_web_app
 npm start
 ```
+Caso o comando acima apresente o erro "react scripts not found", digite o comando "npm i react-scripts" e depois, novamente npm start:
+```
+npm i react-scripts
+npm start
+```
