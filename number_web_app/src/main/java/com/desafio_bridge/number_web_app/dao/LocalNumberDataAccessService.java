@@ -11,11 +11,12 @@ import com.desafio_bridge.number_web_app.model.Number;
 @Repository("local")
 public class LocalNumberDataAccessService implements NumberDao{
 
+    // Lista que representa o histórico de números requeridos
     List<Number> numberList = new ArrayList<>();
 
     @Override
     public void addNumber(int k, List<Integer> listaN, int numN) {
-        numberList.add(new Number(k, listaN, numN));
+        numberList.add(new Number(k, listaN, numN));    
     }
 
     @Override

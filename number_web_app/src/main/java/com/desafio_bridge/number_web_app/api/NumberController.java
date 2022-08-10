@@ -22,7 +22,7 @@ public class NumberController {
 
     @GetMapping(path="{k}")
     public List<Integer> getNumberNByK(@PathVariable("k") int k){
-        return numberService.getNByKValue(k);
+        return numberService.getNByKValue(k);   // retorna quantidade de n
     }
 
     @GetMapping

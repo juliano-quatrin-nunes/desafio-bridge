@@ -1,29 +1,34 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Banner from './components/Banner/index.js'
 import Forms from './components/Forms/index.js';
 import HistTable from './components/HistTable/index.js'
 
 function App() {
 
-  async function refreshNumbers() {
+  const [numbers, setNumbers] = useState([])
+
+  useEffect(()=>{
+    fetch("https://number-app-backend.herokuapp.com/api/v1/number")
+          .then((response) => response.json()
+          .then((numbers) => setNumbers(numbers)))
+  }, [])
+
+  async function refreshNumbers() {    
     let res = await fetch("https://number-app-backend.herokuapp.com/api/v1/number")
     let response = await res.json()
     setNumbers(response)
   }
 
-  const [numbers, setNumbers] = useState([])
 
   return (
-    <div style={{backgroundColor: "#24252e"}}>
-      <header>
-        <Banner />
-        <Forms submit={refreshNumbers}/>
-        <HistTable 
-          numbers={numbers} 
-        />
-      </header>
+    <div className='app'style={{backgroundColor: "#24252e", display: 'flex', flexDirection: 'column'}}>
+      <Banner />
+      <Forms submit={refreshNumbers}/>
+      <HistTable 
+        numbers={numbers} 
+      />
     </div>
-    
+
   );
 }
 
