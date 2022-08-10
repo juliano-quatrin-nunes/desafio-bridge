@@ -18,7 +18,8 @@ Como ambiente de desenvolvimento para o Front-end, também optei por utilizar o 
 ## Outras ferramentas e publicação da aplicação
 Para testar a API Rest criada no Back-end, antes de inciar o Front-end, utilizei o programa Postman.
 
-Além disso, a aplicação foi publicada no cloud provider Heroku, e pode ser acessada pelo seguinte link: https://number-app-frontend.herokuapp.com/
+Além disso, a aplicação foi publicada no cloud provider Heroku, e pode ser acessada pelo seguinte link: https://number-app-frontend.herokuapp.com/.
+
 Para que isso fosse possível, foi necessário separar esse repositório em 2 repositórios diferentes, um para o back-end e outro para o front-end. O conteúdo doss 2 repositórios juntos é exatamente o conteúdo desse repositório.
 
 ## Diretivas para a execução local:
